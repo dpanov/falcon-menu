@@ -4,7 +4,6 @@ function menu() {
 	const Nav = document.querySelector('.js-nav');
 	const Header = document.querySelector('.js-header');
 	const Body = document.querySelector('body');
-
 	const NavTogglers = document.querySelectorAll('.js-nav-toggler');
 	const NavActiveState = document.querySelector('.js-nav-active-state');
 
@@ -69,9 +68,11 @@ function menu() {
 			toggleDropdown(button);
 		});
 
-		// Init active state
+		// Set initial position of active state bar
+		// Based on the position of the nav item
 		setTimeout(() => {
-			NavActiveState.style.transform = 'translateX(' + NavTogglers.item(0).getBoundingClientRect().left + 'px)';
+			console.log(NavTogglers.item(0).getBoundingClientRect());
+			NavActiveState.style.transform = 'translateX(' + Nav.getBoundingClientRect().left + 'px)';
 		}, 500)
 	}
 }

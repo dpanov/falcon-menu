@@ -21,6 +21,7 @@
   pointer-events: unset;
 }
 
+
 // Transition
 .nav-dropdown {
   // Transitioned properties
@@ -33,7 +34,7 @@
   // Transition settings
   transition-property: opacity, transform, visibility;
   transition-timing-function: ease-out;
-  transition-duration: var(--transition-duration);
+  transition-duration: .2s;
 }
 .is-dropdown-toggled + .nav-dropdown {
   // Transitioned properties

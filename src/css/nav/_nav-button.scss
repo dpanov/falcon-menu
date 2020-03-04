@@ -21,7 +21,9 @@
     font-size: 14px;
     font-weight: 400;
     color: #000;
-    margin: 0 calc(var(--space) * 2);
+    // margin: 0 var(--space);
+    margin: 0;
+    width: auto;
   }
 }
 
@@ -47,13 +49,17 @@ body.is-dropdown-toggled .nav-button {
 
 // Login link
 .nav-button--login {
-  display: inline-flex;
   align-items: center;
   display: none;
-  margin-left: 45px;
+  margin-left: 25px;
   z-index: 500;
 
   img {
     margin-left: 5px;
+    display: flex;
+  }
+
+  @media (min-width: 710px) {
+    display: flex;
   }
 }
