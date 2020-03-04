@@ -1,9 +1,7 @@
-import initMenu from './menu';
-import ToggleMenu from './toggle-menu';
+import toggleMenu from './menu';
 
 function init() {
-  initMenu();
-  ToggleMenu();
+  toggleMenu();
 }
 
 init();

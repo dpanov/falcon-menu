@@ -19,7 +19,7 @@
         <img src="./src/images/falcon-logo.svg" alt="Falcon.io" width="155" height="20">
       </a>
 
-      <button type="button" class="nav-back-button js-nav-toggler">&lt; Back to main menu</button>
+      <button type="button" class="nav-back-button js-nav-closer">&lt; Back to main menu</button>
 
       <nav class="nav js-nav" aria-label="Main menu">
         <ul>
@@ -168,10 +168,12 @@
             </div><!-- .nav-dropdown -->
           </li>
           <li>
-           <button class="nav-button js-nav-toggler">Resources</button>
+           <button class="nav-button js-nav-toggler"
+                   aria-controls="nav-solutions" aria-expanded="false">Resources</button>
           </li>
           <li>
-            <button class="nav-button js-nav-toggler">More</button>
+            <button class="nav-button js-nav-toggler" 
+                    aria-controls="nav-solutions" aria-expanded="false">More</button>
           </li>
           <li>
             <a href="http://www.google.com" class="nav-button">

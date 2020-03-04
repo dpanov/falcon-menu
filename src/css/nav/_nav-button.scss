@@ -1,7 +1,7 @@
 .nav-button {
   --space: 10px;
-align-items: center;
 
+  align-items: center;
   background: none;
   color: #495166;
   cursor: pointer;
@@ -9,11 +9,10 @@ align-items: center;
   flex-direction: row;
   font-size: 24px;
   font-weight: 300;
-  height: 34px;
   line-height: 1;
   margin: 5px 0;
   outline: none;
-  padding: 0 calc(var(--space) * 2);
+  padding: var(--space) calc(var(--space) * 2);
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -24,9 +23,14 @@ align-items: center;
     color: #000;
     font-size: 14px;
     font-weight: 400;
-    // margin: 0 var(--space);
+    height: 34px;
     margin: 0;
+    padding: 0 var(--space);
     width: auto;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 calc(var(--space) * 2);
   }
 }
 
