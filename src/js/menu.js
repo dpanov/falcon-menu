@@ -44,7 +44,7 @@ function toggleMenu() {
   // Close the dropdown and remove all active states
   function closeDropdown() {
     ActiveButton.classList.remove(toggledDropdownClass);
-    setActiveIndicator(Nav, false);
+    setActiveIndicator(ActiveButton, false);
     saveActiveButton(null);
     Body.classList.remove(toggledDropdownClass);
   }
