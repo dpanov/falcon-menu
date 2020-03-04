@@ -1,16 +1,16 @@
 .nav-back-button {
-  text-transform: uppercase;
-  font-weight: 600;
-  top: var(--container-space);
-  left: var(--container-space);
   background: #fff;
+  display: none;
+  font-weight: 600;
   height: 70px;
   left: 0;
-  width: 200px;
+  padding: 0 var(--container-space);
   position: absolute;
+  text-align: left;
+  text-transform: uppercase;
   top: 0;
+  width: 200px;
   z-index: 1000;
-  display: none;
   
   @media (min-width: 710px) {
     display: none !important;
