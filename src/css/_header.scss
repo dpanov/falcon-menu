@@ -8,14 +8,20 @@
 }
 
 .header__container {
-  align-items: center;
-  display: grid;
-  grid-template-columns: min-content 1fr max-content;
   height: 70px;
-  justify-items: center;
   margin: 0 auto;
   max-width: var(--container-width);
   padding: 0 var(--container-space);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: min-content 1fr max-content;
+    justify-items: center;
+  } 
 }
 
 .header__action-button {

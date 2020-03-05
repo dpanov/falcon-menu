@@ -7,7 +7,7 @@ function toggleMenu() {
   const Body = document.querySelector('body');
   
   const MenuToggler = document.querySelector('.js-toggle-menu');
-  const NavTogglers = document.querySelectorAll('.js-nav-toggler');
+  const NavTogglers = [].slice.call(document.querySelectorAll('.js-nav-toggler'));
   const NavCloser = document.querySelector('.js-nav-closer');
 	const NavActiveState = document.querySelector('.js-nav-active-state');
 
@@ -43,10 +43,12 @@ function toggleMenu() {
 
   // Close the dropdown and remove all active states
   function closeDropdown() {
-    ActiveButton.classList.remove(toggledDropdownClass);
-    setActiveIndicator(ActiveButton, false);
-    saveActiveButton(null);
-    Body.classList.remove(toggledDropdownClass);
+    if (ActiveButton) {
+      ActiveButton.classList.remove(toggledDropdownClass);
+      setActiveIndicator(ActiveButton, false);
+      saveActiveButton(null);
+      Body.classList.remove(toggledDropdownClass);
+    }
   }
 
   // Update the position and width of the active state bar
@@ -108,8 +110,6 @@ function toggleMenu() {
   }
 
   function toggleMenu() {
-    console.log('hey');
-    
     Nav.classList.toggle(toggledNavClass);
     MenuToggler.classList.toggle(toggledNavClass);
     Body.classList.toggle(toggledNavClass);
