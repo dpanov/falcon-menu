@@ -1,4 +1,4 @@
-// Structure
+// Structure styles
 .nav-dropdown {
   bottom: 0;
   left: 0;
@@ -22,7 +22,7 @@
 }
 
 
-// Transition
+// Transition styles
 .nav-dropdown {
   // Transitioned properties
   opacity: 0;
@@ -33,7 +33,7 @@
 
   // Transition settings
   transition-property: opacity, transform, visibility;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in;
   transition-duration: .2s;
 }
 .is-dropdown-toggled + .nav-dropdown {
@@ -44,6 +44,6 @@
   
   @media (min-width: 710px) {
     transform: translateY(0);
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
   }
 }

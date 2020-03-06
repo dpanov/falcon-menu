@@ -35,7 +35,7 @@ Note: The menu does not work on Internet Explorer because of CSS custom properti
  - Hamburger icon don't overlap with menu on some screen sizes
 
 ## Things to consider
- - dropdown menu slide animation is a bit different - in order to use hardware-accelerated CSS properties the sliding logic of the dropdown menu is a bit different than the original one.
+ - in order to use hardware-accelerated CSS properties the sliding logic of the dropdown menu is a bit different than the original one.
  - Some colors are different due to WCAG compliance and also due to changing opacity level for some of them, instead of changing the background-color. Of course, both changes must be coordinated with the designer or the product owner in order to be in line with the brand identity.
  - I've initially used <strong> for the Publish, Engage, etc. as it makes more sense, but Narrator with Chrome didn't read the text at all, so I've changed that to a span.
 
