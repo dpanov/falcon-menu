@@ -17,11 +17,7 @@
   text-decoration: none;
   width: 100%;
   z-index: 500;
-
-  padding: 10px 20px;
-  @supports (--custom: properties) {
-    padding: var(--space) calc(var(--space) * 2);
-  }
+  padding: var(--space) calc(var(--space) * 2);
 
   @media (min-width: 710px) {
     color: #000;
@@ -30,18 +26,11 @@
     height: 34px;
     margin: 0;
     width: auto;
-      
-    padding: 0 10px;
-    @supports (--custom: properties) {
-      padding: 0 var(--space);
-    }
+    padding: 0 var(--space);
   }
 
   @media (min-width: 1024px) {
-    padding: 0 20px;
-    @supports (--custom: properties) {
-      padding: 0 calc(var(--space) * 2);
-    }
+    padding: 0 calc(var(--space) * 2);
   }
 }
 

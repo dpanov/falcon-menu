@@ -6,26 +6,18 @@
 
 .button {
   background: #fff;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--button-height);
   color: #000;
   display: inline-block;
+  font-family: var(--fonts);
   font-size: 14px;
+  height: var(--button-height);
   line-height: 42px; // --button-height - border-width
   padding: 0 40px;
   text-decoration: none;
   text-transform: uppercase;
   transition: color, border-color .3s ease-in;
-
-  border: 1px solid #000;
-  height: 46px;
-  border-radius: 46px;
-  font-family: sans-serif;
-
-  @supports (--custom: properties) {
-    border: 1px solid var(--color-primary);
-    border-radius: var(--button-height);
-    height: var(--button-height);
-    font-family: var(--fonts);
-  }
 }
 
 .button--outlined {

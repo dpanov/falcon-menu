@@ -62,11 +62,19 @@
   padding: var(--space) 0;
   transition: color .3s ease-in;
 
+  > .sr-only {
+    display: none;
+  }
+
   @media (min-width: 710px) {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.57;
     padding: 0;
+    
+    > .sr-only {
+      display: inline;
+    }
   }
 }
 

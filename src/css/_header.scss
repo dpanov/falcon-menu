@@ -12,16 +12,10 @@
   margin: 0 auto;
   max-width: var(--container-width);
   padding: 0 var(--container-space);
-
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  justify-items: center;
   align-items: center;
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: min-content 1fr max-content;
-    justify-items: center;
-  } 
 }
 
 .header__action-button {
