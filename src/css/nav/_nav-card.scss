@@ -42,8 +42,8 @@
   display: none;
   grid-area: icon;
   opacity: .2;
-  transition-property: opacity;
   transition-duration: .3s;
+  transition-property: opacity;
   transition-timing-function: ease-out;
 
   @media (min-width: 710px) {
@@ -57,13 +57,15 @@
 
 .nav-card__title {
   --space: 10px;
-  display: block;
 
+  display: block;
   font-size: 24px;
   font-weight: 300;
   line-height: 1;
   margin: 0 0 5px;
+  overflow: hidden;
   padding: var(--space) 0;
+  position: relative;
   transition: color .3s ease-in;
 
   > .sr-only {

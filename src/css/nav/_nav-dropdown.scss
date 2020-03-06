@@ -26,15 +26,15 @@
 .nav-dropdown {
   // Transitioned properties
   opacity: 0;
-  visibility: hidden; // needed to make it not accessible by keyboard if hidden
-  @media (min-width: 710px) {
-    transform: translateY(calc(-100% - 70px));
-  }
+  transition-duration: .2s;
 
   // Transition settings
   transition-property: opacity, transform, visibility;
   transition-timing-function: ease-in;
-  transition-duration: .2s;
+  visibility: hidden; // needed to make it not accessible by keyboard if hidden
+  @media (min-width: 710px) {
+    transform: translateY(calc(-100% - 70px));
+  }
 }
 .is-dropdown-toggled + .nav-dropdown {
   // Transitioned properties

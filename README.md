@@ -12,13 +12,6 @@ Demo: https://falcon-menu.netlify.com/
 
 Note: The menu does not work on Internet Explorer because of CSS custom properties and CSS grid, but the code can easily be modified to add support for IE.
 
-## Performance features:
- - Less DOM elements
- - No JS used for transitions
- - Mosttly hardware-accelerated CSS property are used for transitions (transform and opacity). Exception are:
-    - Width of the active state element. It can be done with transform: scaleX(), but it will cause unnecessary code complications.
-    - Button/link colors
-
 ## Accessibility features:
  - Fully accessible by keyboard
  - Fully accessible by screen readers
@@ -31,6 +24,11 @@ Note: The menu does not work on Internet Explorer because of CSS custom properti
  - Added some whitespace between nav links in the dropdown - it was getting cluttered on tablet sizes (834px screen width)
  - There's a `<span class="sr-only">.</span>` element after each subnav title that is not visible, but screen readers will know about it. This is to ensure a quick pause between "Publish" and "Manage all your content in one calendar". Otherwise it was read like "Publish manage all your content..."
 
+## Performance features:
+ - Less DOM elements - mainly because there is only one menu and not two separate ones for desktop/mobile
+ - No JS used for transitions
+ - Uses as much hardware-accelerated CSS property for transitions as possible, which results in smoother transitions.
+
 ## CSS stuff
  - Use of CSS variables for things like primary color and button dimensions means easier styling and future changes (e.g. adding dark mode in the future)
  - Request demo text is properly centered vertically
@@ -41,11 +39,7 @@ Note: The menu does not work on Internet Explorer because of CSS custom properti
  - Some colors are different due to WCAG compliance and also due to changing opacity level for some of them, instead of changing the background-color. Of course, both changes must be coordinated with the designer or the product owner in order to be in line with the brand identity.
  - I've initially used <strong> for the Publish, Engage, etc. as it makes more sense, but Narrator with Chrome didn't read the text at all, so I've changed that to a span.
 
-Using ul's and li's in a navigation is a good idea, because they provide a count and position within the list.
-
-## To do
-- Make screenshots of all the ways the menu is currently broken
-
-## Things I Learned:
-- `<button>` with `display: grid` not working as expected in Safari
-- Chrome with Narrator have issues when there are multiple text elements in a link
+## Bugs in the current menu
+ - The major one - Opening a dropdown, e.g. Platform, then clicking on another dropdown (e.g. Solutions) removes the transparent backdrop. Then if you close the Solutions dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also can't click anything on the page.
+ - Desktop and mobile menus have different links.
+ - Issues with both desktop and mobile menu appearing on resolutions that are between a phone and a tablet. Although it wouldn't affect much devices now, it's always a good idea to make your website future-proof.

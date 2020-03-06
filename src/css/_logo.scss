@@ -11,9 +11,9 @@
 }
 
 .logo img {
+  height: auto;
   max-width: unset;
   width: 130px;
-  height: auto;
 
   @media (min-width: 710px) {
     width: auto;
