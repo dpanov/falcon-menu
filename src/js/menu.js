@@ -1,15 +1,15 @@
 function toggleMenu() {
-	const toggledDropdownClass = 'is-dropdown-toggled';
-	const toggledNavClass = 'is-nav-toggled';
+  const toggledDropdownClass = 'is-dropdown-toggled';
+  const toggledNavClass = 'is-nav-toggled';
 
-	const Nav = document.querySelector('.js-nav');
-	const Header = document.querySelector('.js-header');
+  const Nav = document.querySelector('.js-nav');
+  const Header = document.querySelector('.js-header');
   const Body = document.querySelector('body');
-  
+
   const MenuToggler = document.querySelector('.js-toggle-menu');
   const NavTogglers = [].slice.call(document.querySelectorAll('.js-nav-toggler'));
   const NavCloser = document.querySelector('.js-nav-closer');
-	const NavActiveState = document.querySelector('.js-nav-active-state');
+  const NavActiveState = document.querySelector('.js-nav-active-state');
 
   let ActiveButton = null;
   
