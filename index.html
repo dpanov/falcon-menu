@@ -19,22 +19,30 @@
         <img src="./src/images/falcon-logo.svg" alt="Falcon.io" width="155" height="20">
       </a>
 
-      <button type="button" class="nav-back-button js-nav-closer">&lt; Back to main menu</button>
+      <button type="button" class="nav-back-button js-nav-closer">
+        <img src="./src/images/icon-chevron-right.svg"
+                    class="nav-back-button__icon" alt="" aria-hidden="true" />
+        Back to main menu
+      </button>
 
       <nav class="nav js-nav" aria-label="Main menu">
         <ul>
           <li>
             <button class="nav-button js-nav-toggler"
-                    aria-controls="nav-platform" aria-expanded="false">Platform</button>
+                    aria-controls="nav-platform" aria-expanded="false" aria-haspopup="true">
+              Platform
+              <img src="./src/images/icon-chevron-right.svg"
+                    class="nav-button__icon" alt="" aria-hidden="true" />
+            </button>
             <div class="nav-dropdown">
-              <ul class="nav-container" id="nav-platform">
+              <ul class="nav-dropdown-container" id="nav-platform">
                 <li>
                   <a href="#publish" class="nav-card">
                     <div class="nav-card__content">
-                      <strong class="nav-card__title">
+                      <span class="nav-card__title">
                         Publish
                         <span class="sr-only">.</span>
-                      </strong>
+                      </span>
                       <p class="nav-card__text">Manage all your content in one calendar.</p>
                     </div>
                     <span class="nav-card__icon icon"></span>
@@ -118,14 +126,18 @@
                     <span class="nav-card__icon icon"></span>
                   </a>
                 </li>
-              </ul><!-- .nav-container -->
+              </ul><!-- .nav-dropdown-container -->
             </div><!-- .nav-dropdown -->
           </li>
           <li>
             <button class="nav-button js-nav-toggler"
-                    aria-controls="nav-solutions" aria-expanded="false">Solutions</button>
+                    aria-controls="nav-solutions" aria-expanded="false" aria-haspopup="true">
+              Solutions
+              <img src="./src/images/icon-chevron-right.svg" 
+                   class="nav-button__icon" alt="" aria-hidden="true" />
+            </button>
             <div class="nav-dropdown">
-              <ul class="nav-container" id="nav-solutions">
+              <ul class="nav-dropdown-container" id="nav-solutions">
                 <li>
                   <a href="#social-media-management" class="nav-card">
                     <div class="nav-card__content">
@@ -203,16 +215,154 @@
                     <span class="nav-card__icon icon"></span>
                   </a>
                 </li>
-              </ul><!-- .nav-container -->
+              </ul><!-- .nav-dropdown-container -->
             </div><!-- .nav-dropdown -->
           </li>
           <li>
            <button class="nav-button js-nav-toggler"
-                   aria-controls="nav-solutions" aria-expanded="false">Resources</button>
+                   aria-controls="nav-resources" aria-expanded="false" aria-haspopup="true">
+              Resources
+              <img src="./src/images/icon-chevron-right.svg" 
+                   class="nav-button__icon" alt="" aria-hidden="true" />
+            </button>
+            <div class="nav-dropdown">
+              <ul class="nav-dropdown-container" id="nav-resources">
+                <li>
+                  <a href="#social-media-management" class="nav-card">
+                    <div class="nav-card__content">
+                      <span class="nav-card__title">
+                        Blog
+                        <span class="sr-only">.</span>
+                      </span>
+                      <p class="nav-card__text">The latest trends, news and insights</p>
+                    </div>
+                    <span class="nav-card__icon icon"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#social-listening" class="nav-card">
+                    <div class="nav-card__content">
+                      <span class="nav-card__title">
+                        Handbooks
+                        <span class="sr-only">.</span>
+                      </span>
+                      <p class="nav-card__text">In-depth content to inspire and educate.</p>
+                    </div>
+                    <span class="nav-card__icon icon"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#content-marketing" class="nav-card">
+                    <div class="nav-card__content">
+                      <span class="nav-card__title">
+                        Webinars
+                        <span class="sr-only">.</span>
+                      </span>
+                      <p class="nav-card__text">Expert discussions on key marketing topics.</p>
+                    </div>
+                    <span class="nav-card__icon icon"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#customer-engagement" class="nav-card">
+                    <div class="nav-card__content">
+                      <span class="nav-card__title">
+                        Case Stories
+                        <span class="sr-only">.</span>
+                      </span>
+                      <p class="nav-card__text">Falcon in action with diverse companies.</p>
+                    </div>
+                    <span class="nav-card__icon icon"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#audience-management" class="nav-card">
+                    <div class="nav-card__content">
+                      <span class="nav-card__title">
+                        Events
+                        <span class="sr-only">.</span>
+                      </span>
+                      <p class="nav-card__text">Get involved in key marketing discussions.</p>
+                    </div>
+                    <span class="nav-card__icon icon"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#agencies" class="nav-card">
+                    <div class="nav-card__content">
+                      <span class="nav-card__title">
+                        Spark 2019
+                        <span class="sr-only">.</span>
+                      </span>
+                      <p class="nav-card__text">A must-attend digital marketing conference</p>
+                    </div>
+                    <span class="nav-card__icon icon"></span>
+                  </a>
+                </li>
+              </ul><!-- .nav-dropdown-container -->
+            </div><!-- .nav-dropdown -->
           </li>
           <li>
             <button class="nav-button js-nav-toggler" 
-                    aria-controls="nav-solutions" aria-expanded="false">More</button>
+                    aria-controls="nav-more" aria-expanded="false" aria-haspopup="true">
+              More
+              <img src="./src/images/icon-chevron-right.svg" 
+                   class="nav-button__icon" alt="" aria-hidden="true" />
+            </button>
+            <div class="nav-dropdown">
+              <ul class="nav-dropdown-container nav-dropdown-container--more" id="nav-more">
+                <li class="nav-list">
+                  <h2 id="nav-more-benefits">Benefits</h2>
+
+                  <ul aria-labelledby="nav-more-benefits">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Partners</a></li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <h2 id="nav-more-support">Support</h2>
+
+                  <ul aria-labelledby="nav-more-support">
+                    <li><a href="#">Platform Status</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Report Security Issue</a></li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <h2 id="nav-more-about">About</h2>
+
+                  <ul aria-labelledby="nav-more-about">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Press</a></li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <h2 id="nav-more-social">Social</h2>
+
+                  <ul aria-labelledby="nav-more-social">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <h2 id="nav-more-contact">Contact</h2>
+
+                  <ul aria-labelledby="nav-more-contact">
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </li>
+              </ul><!-- .nav-dropdown-container -->
+            </div><!-- .nav-dropdown -->
           </li>
           <li>
             <a href="#" class="nav-button">
@@ -223,7 +373,7 @@
           <li>
             <a href="https://app.falcon.io" target="_blank" class="nav-button nav-button--login">
               Log in
-              <img src="./src/images/icon-lock.svg" alt="" width="18" height="18" aria-hidden="true">
+              <img src="./src/images/icon-lock.svg" alt="" width="18" height="18" class="nav-button__icon" aria-hidden="true">
             </a>
           </li>
         </ul>

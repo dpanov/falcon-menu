@@ -13,7 +13,9 @@
     grid-gap: 10px;
   }
 }
-.nav-card:hover {
+
+.nav-card:hover,
+.nav-card:focus {
   .nav-card__title,
   .nav-card__text {
     color: var(--color-primary);
@@ -41,6 +43,8 @@
   grid-area: icon;
   opacity: .2;
   transition-property: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
 
   @media (min-width: 710px) {
     display: block;

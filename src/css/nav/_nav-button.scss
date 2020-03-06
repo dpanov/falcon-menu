@@ -34,6 +34,15 @@
   }
 }
 
+.nav-button__icon {
+  transform: translateY(3px);
+
+  @media (min-width: 710px) {
+    display: none;
+    transform: none;
+  }
+}
+
 // Transition
 .nav-button {
   // Transitioned properties
@@ -57,16 +66,17 @@ body.is-dropdown-toggled .nav-button {
 // Login link
 .nav-button--login {
   align-items: center;
-  display: none;
-  margin-left: 25px;
+  margin-top: 45px;
   z-index: 500;
 
   img {
-    display: flex;
+    display: inline-block;
     margin-left: 5px;
   }
 
   @media (min-width: 710px) {
     display: flex;
+    margin-top: 0;
+    margin-left: 25px;
   }
 }

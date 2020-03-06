@@ -1,0 +1,24 @@
+.nav-list {
+
+}
+
+.nav-list h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+}
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.nav-list a:focus::after {
+  top: -2px;
+  bottom: -2px;
+}

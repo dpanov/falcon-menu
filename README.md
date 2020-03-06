@@ -1,6 +1,8 @@
 # Falcon.io menu
 Recreation of falcon.io main menu that is more accessible, has smoother transitions and is fully responsive.
 
+Demo: https://falcon-menu.netlify.com/
+
 ## Tested on the following devices, browsers, OSs and screen readers
  - Chrome (MacOS and Windows) (VoiceOver, NVDA, Narrator)
  - Firefox (MacOS and Windows) (VoiceOver, NVDA, Narrator)
