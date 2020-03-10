@@ -1,15 +1,14 @@
 {
-  "name": "falcon.io",
+  "name": "falcon.io-menu-recreation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Recreation of falcon.io main menu that is more accessible, has smoother transitions and is fully responsive.",
   "scripts": {
     "dev": "parcel ./index.html --public-url / --out-dir ./dist",
     "build": "parcel build ./index.html --public-url / --out-dir ./dist"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.24.4",
-    "parcel-plugin-static-files-copy": "^2.3.1"
+    "sass": "^1.24.4"
   },
   "author": "Dimitar Panov",
   "license": "ISC"

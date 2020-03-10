@@ -1,126 +1,100 @@
-function toggleMenu() {
+function menu() {
   const toggledDropdownClass = 'is-dropdown-toggled';
   const toggledNavClass = 'is-nav-toggled';
 
-  const Nav = document.querySelector('.js-nav');
-  const Header = document.querySelector('.js-header');
-  const Body = document.querySelector('body');
+  const domBody = document.querySelector('body');
+  const domHeader = document.querySelector('.js-header');
 
-  const MenuToggler = document.querySelector('.js-toggle-menu');
-  const NavTogglers = [].slice.call(document.querySelectorAll('.js-nav-toggler'));
-  const NavCloser = document.querySelector('.js-nav-closer');
-  const NavActiveState = document.querySelector('.js-nav-active-state');
+  const domNav = document.querySelector('.js-nav');
+  const domNavToggler = document.querySelector('.js-nav-toggler');
+  const domNavDropdownTogglers = [].slice.call(document.querySelectorAll('.js-nav-dropdown-toggler'));
+  const domNavCloser = document.querySelector('.js-nav-closer');
+  const domNavActiveState = document.querySelector('.js-nav-active-state');
 
-  let ActiveButton = null;
-  
+  // Used to store the current active dropdown button
+  let activeButton = null;
+
   init();
 
   function init() {
-    setActiveIndicator(Nav, false);
+    // Set the initial active state position, based on the Nav dom element
+    updateActiveIndicator(domNav, false);
 
     // Add click listeners to all dropdown togglers
-    NavTogglers.forEach((NavToggler) => {
-      NavToggler.addEventListener('click', () => {
-        toggleButtonClass(NavToggler);
-        setActiveIndicator(NavToggler);
-        saveActiveButton(NavToggler);
-        toggleBodyOverlay();
+    domNavDropdownTogglers.forEach((domNavToggler, index) => {
+      domNavToggler.addEventListener('click', () => {
+        if (activeButton === domNavToggler) {
+          closeDropdown();
+        } else {
+          closeDropdown(false);
+          openDropdown(domNavToggler);
+        }
       })
     });
 
     // Close the dropdown if you click outside of the header
-    Body.addEventListener('click', closeDropdown);
+    domBody.addEventListener('click', closeDropdown);
 
     // Close the dropdown if you click the BACK TO MAIN MENU button
-    NavCloser.addEventListener('click', closeDropdown);
-    // Ensure clicks in the header area don't close the nav dropdown
-    Header.addEventListener('click', (e) => {
-      e.stopPropagation();
-    })
+    domNavCloser.addEventListener('click', closeDropdown);
 
-    MenuToggler.addEventListener('click', toggleMenu);
+    // Ensure clicks in the header area don't close the nav dropdown
+    domHeader.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // Listener for menu button on mobile
+    domNavToggler.addEventListener('click', toggleNav);
   }
 
   // Close the dropdown and remove all active states
-  function closeDropdown() {
-    if (ActiveButton) {
-      ActiveButton.classList.remove(toggledDropdownClass);
-      setActiveIndicator(ActiveButton, false);
-      saveActiveButton(null);
-      Body.classList.remove(toggledDropdownClass);
+  function closeDropdown(clearActiveStyles = true) {
+    if (activeButton && clearActiveStyles) {
+      updateActiveIndicator(activeButton, false);
     }
+
+    if (activeButton) {
+      activeButton.classList.remove(toggledDropdownClass);
+      activeButton.setAttribute('aria-expanded', false);
+      domBody.classList.remove(toggledDropdownClass);
+      activeButton = null;
+    }
+  }
+
+  // Open the dropdown, add proper active state and update aria-expanded
+  function openDropdown(clickedButton) {
+    activeButton = clickedButton;
+
+    updateActiveIndicator(clickedButton);
+    domBody.classList.add(toggledDropdownClass);
+    clickedButton.classList.add(toggledDropdownClass);
+    clickedButton.setAttribute('aria-expanded', true);
   }
 
   // Update the position and width of the active state bar
-  function setActiveIndicator(Element, isActive = true) {
-    const offsetLeft = Element.getBoundingClientRect().left;
-    const width = Element.getBoundingClientRect().width;
+  function updateActiveIndicator(clickedButton, updateWidth = true) {
+    const offsetLeft = clickedButton.getBoundingClientRect().left;
+    const width = clickedButton.getBoundingClientRect().width;
 
-    NavActiveState.style.transform = 'translateX(' + offsetLeft + 'px)';
+    domNavActiveState.style.transform = 'translateX(' + offsetLeft + 'px)';
     
-    if (isActive) {
-      NavActiveState.style.width = width + 'px';
+    if (updateWidth) {
+      domNavActiveState.style.width = width + 'px';
     } else {
-      setTimeout(() => {
-        NavActiveState.style.width = '0px';
-      }, 1);
+      domNavActiveState.style.width = '0';
     }
   }
 
-  // Sets dark overlay under the menu, but over the main content
-  function toggleBodyOverlay() {
-    if (ActiveButton) {
-      Body.classList.add(toggledDropdownClass);
-    } else {
-      Body.classList.remove(toggledDropdownClass);
-    }
+  // Toggle the menu - used on mobile only
+  function toggleNav() {
+    domNav.classList.toggle(toggledNavClass);
+    domNavToggler.classList.toggle(toggledNavClass);
+    domBody.classList.toggle(toggledNavClass);
+    domBody.classList.remove('is-dropdown-toggled');
+    activeButton.classList.remove('is-dropdown-toggled');
+    
+    activeButton = null;
   }
-
-  // Save the active button
-  function saveActiveButton(ClickedButton) {
-    if (isButtonActive(ClickedButton)) {
-      ActiveButton = null;
-      return;
-    }
-
-    ActiveButton = ClickedButton;
-  }
-
-  // Toggle the button class
-  function toggleButtonClass(ClickedButton) {
-    if (ActiveButton) {
-      ActiveButton.classList.remove(toggledDropdownClass);
-      ActiveButton.setAttribute('aria-expanded', false);
-    }
-
-    // If the clicked button is the active one
-    if (isButtonActive(ClickedButton)) {
-      setActiveIndicator(ClickedButton, false);
-
-      return;
-    }
-
-    ClickedButton.classList.add(toggledDropdownClass);
-    ClickedButton.setAttribute('aria-expanded', true);
-  }
-
-  // Check if a button is the active one
-  function isButtonActive(Button) {
-    return Button === ActiveButton;
-  }
-
-  function toggleMenu() {
-    Nav.classList.toggle(toggledNavClass);
-    MenuToggler.classList.toggle(toggledNavClass);
-    Body.classList.toggle(toggledNavClass);
-    Body.classList.remove('is-dropdown-toggled');
-    saveActiveButton(null);
-
-    NavTogglers.forEach((button) => {
-      button.classList.remove('is-dropdown-toggled');
-    })
-  }
-
 }
 
-export default toggleMenu;
+export default menu;
