@@ -1,13 +1,19 @@
 .header {
   height: 100%;
+  pointer-events: none;
   position: fixed;
+  top: 0;
   width: 100%;
-  // background-color: #fff;
   z-index: 2000;
 
   @media (min-width: 710px) {
     height: auto;
+    pointer-events: all;
   }
+}
+
+.is-nav-toggled .header {
+  pointer-events: all;
 }
 
 .header__container {

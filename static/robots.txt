@@ -1,0 +1,29 @@
+# Oh, look - a robots.txt!
+# But hey, thanks for the interest in Falcon.io - and actually, since you're so interested
+# in us, how 'bout dropping by our request demo page, sign up, and we show you what we can
+# do for you?
+User-agent: *
+Disallow: /jobs/*/
+Disallow: /insights-hub/employees/
+Disallow: /insights-hub/type/
+Disallow: /insights-hub/tag/
+Disallow: /*/feed/
+Disallow: /blog/employees/
+Disallow: /blog/type/
+Disallow: /blog/tag/
+Disallow: /blog/page-class-type/padding/
+Disallow: /wp-admin/
+Disallow: /request-demo/*/
+Allow: /request-demo/instagram-publishing-and-measurement/$
+Disallow: *.pdf$
+Disallow: /resources/downloads/success/*
+Disallow: /de/ressourcen/downloads/erfolg/*
+Disallow: /pmzng0ylo0
+Sitemap: https://www.falcon.io/sitemap_index.xml
+Disallow: /success/*
+Disallow: */hero
+Disallow: /access/*
+Disallow: /cision-contact-form/
+Disallow: /essentials/*
+Disallow: /wp-content/themes/falconio/
+# Disallow: more.falcon.io/*

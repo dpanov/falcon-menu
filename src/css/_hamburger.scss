@@ -9,6 +9,7 @@
   font-weight: 600;
   margin: 0;
   padding: 12px calc(var(--hamburger-space) * 4 + 12px) 12px 12px;
+  pointer-events: all;
   position: relative;
   text-transform: uppercase;
   z-index: 1000;

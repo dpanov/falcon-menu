@@ -91,7 +91,10 @@ function menu() {
     domNavToggler.classList.toggle(toggledNavClass);
     domBody.classList.toggle(toggledNavClass);
     domBody.classList.remove('is-dropdown-toggled');
-    activeButton.classList.remove('is-dropdown-toggled');
+    
+    if (activeButton) {
+      activeButton.classList.remove('is-dropdown-toggled');
+    }
     
     activeButton = null;
   }
