@@ -41,7 +41,7 @@ Note: The menu does not currently work on Internet Explorer because of CSS custo
  - Some colors are different due to WCAG compliance and also due to using opacity instead of changing the background-color property. Of course, both changes must be coordinated with the designer or the product owner in order to be in line with the brand identity.
  - I've initially used `<strong>` for the Publish, Engage, etc. as it makes more sense, but Narrator with Chrome didn't read the text at all, so I've changed that to a `<span>`.
 
-## Bugs in the current menu
- - The major one - Opening a dropdown, e.g. Platform, then clicking on another dropdown (e.g. Solutions) removes the transparent backdrop. Then if you close the Solutions dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also can't click anything on the page.
+## Some bugs that are currently present on the menu at falcon.io
+ - The major one - If you open a dropdown, e.g. Platform, then clicking on another dropdown (e.g. Solutions) the transparent backdrop is removed. Then if you close the Solutions dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also can't click anything on the page.
  - Desktop and mobile menus have different links.
  - Issues with both desktop and mobile menu appearing on resolutions that are between a phone and a tablet. Although it wouldn't affect much devices now, it's always a good idea to make your website future-proof.
