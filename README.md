@@ -12,7 +12,7 @@ Original: https://www.falcon.io/
  - iPhone 8 (Safari) (VoiceOver)
  - iPad Pro 11" (Safari) (VoiceOver)
 
-Note: The menu does not currently work on Internet Explorer because of CSS custom properties and CSS grid The code can easily be modified to add support for IE by using SASS variables and Flexbox, instead of CSS properties and Grid.
+Note: The menu does not currently work properly in Internet Explorer because of CSS custom properties and CSS grid The code can easily be modified to add support for IE by using SASS variables and Flexbox, instead of CSS properties and Grid.
 
 ## Accessibility features:
  - Fully accessible by keyboard
@@ -42,6 +42,7 @@ Note: The menu does not currently work on Internet Explorer because of CSS custo
  - I've initially used `<strong>` for the Publish, Engage, etc. as it makes more sense, but Narrator with Chrome didn't read the text at all, so I've changed that to a `<span>`.
 
 ## Some bugs that are currently present on the menu at falcon.io
- - The major one - If you open a dropdown, e.g. Platform, then clicking on another dropdown (e.g. Solutions) the transparent backdrop is removed. Then if you close the Solutions dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also can't click anything on the page.
+ - The major one - the menu is not accessible. If you are a blind person that uses a screen reader you won't ever understand that Platform, Solutions, etc. are buttons, because they are not marked up that way. Also, they are not focusable if you hit `TAB`, so if you've focused the logo, the next thing that you can focus is the Pricing link.
+ - Another major one - if you open a dropdown, e.g. **Platform**, then if you click on another dropdown (e.g. **Solutions**) the transparent backdrop is removed. After that if you close the **Solutions** dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also **can't click anything on the page**.
  - Desktop and mobile menus have different links.
  - Issues with both desktop and mobile menu appearing on resolutions that are between a phone and a tablet. Although it wouldn't affect much devices now, it's always a good idea to make your website future-proof.

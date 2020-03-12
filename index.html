@@ -409,8 +409,7 @@
           <li>iPad Pro 11" (Safari) (VoiceOver)</li>
         </ul>
   
-        <p>Note: The menu does not currently work on Internet Explorer because of CSS custom properties and CSS grid. The code can easily be modified to add support for IE by using SASS variables and Flexbox, instead of CSS properties and Grid.</p>
-
+        <p>Note: The menu does not currently work properly in Internet Explorer because of CSS custom properties and CSS grid. The code can easily be modified to add support for IE by using SASS variables and Flexbox, instead of CSS properties and Grid.</p>
       </section>
 
       <section>
@@ -458,8 +457,10 @@
 
       <section>
         <h2>Some bugs that are currently present on the menu at <a href="https://www.falcon.io/">falcon.io</a></h2>
+
         <ul>
-          <li>The major one - If you open a dropdown, e.g. <strong>Platform</strong>, then clicking on another dropdown (e.g. <strong>Solutions</strong>) the transparent backdrop is removed. Then if you close the <strong>Solutions</strong> dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also <strong>can't click anything on the page</strong>.</li>
+          <li>The major one - the menu is not accessible. If you are a blind person that uses a screen reader you won't ever understand that Platform, Solutions, etc. are buttons, because they are not marked up that way. Also, they are not focusable if you hit <code>TAB</code>, so if you've focused the logo, the next thing that you can focus is the Pricing link.</li>
+          <li>Another major one - if you open a dropdown, e.g. <strong>Platform</strong>, then if you click on another dropdown (e.g. <strong>Solutions</strong>) the transparent backdrop is removed. After that if you close the <strong>Solutions</strong> dropdown the backdrop appears and as a bonus you have overflow and scrolling issues. And you also <strong>can't click anything on the page</strong>.</li>
           <li>Desktop and mobile menus have different links. I suppose the mobile one isn't up to date with the desktop one.</li>
           <li>Issues with both desktop and mobile menu appearing on resolutions that are between a phone and a tablet. Although it wouldn't affect much devices now, it's always a good idea to make your website fully responsive and future-proof.</li>
         </ul>
