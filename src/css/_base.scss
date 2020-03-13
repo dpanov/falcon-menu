@@ -33,7 +33,7 @@ body::after {
   left: 0;
   opacity: 0;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   transition: opacity var(--transition-duration) ease-in-out;
@@ -124,7 +124,7 @@ h1 {
 h2 {
   font-size: 22px;
   font-weight: 600;
+  line-height: 1.4;
   margin-bottom: .5em;
   margin-top: 2em;
-  line-height: 1.4;
 }
