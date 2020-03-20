@@ -29,6 +29,7 @@ Note: The menu does not currently work properly in Internet Explorer because of 
 ## Performance features:
  - Less DOM elements - mainly because there is only one menu and not two separate ones for desktop/mobile.
  - No JS used for transitions.
+ - VanillaJS only, no jQuery needed.
  - Uses as much hardware-accelerated CSS property for transitions as possible, which results in smoother transitions.
 
 ## CSS stuff
