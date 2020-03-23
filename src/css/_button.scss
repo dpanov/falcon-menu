@@ -20,10 +20,6 @@
   transition: color, border-color .3s ease-in;
 }
 
-.button--outlined {
-  color: var(--color-primary);
-}
-
 .button--demo {
   background-color: var(--color-primary);
   border-radius: 0;
@@ -55,4 +51,20 @@
   top: 12px;
   width: auto;
   z-index: 1000;
+}
+
+
+// Transition
+.button--outlined {
+  background-color: transparent;
+  color: var(--color-primary);
+
+  // Transition settings
+  transition-duration: var(--transition-duration);
+  transition-property: color, background-color;
+  transition-timing-function: ease-in-out;
+}
+.button--outlined:hover {
+  background-color: var(--color-primary);
+  color: #fff;
 }

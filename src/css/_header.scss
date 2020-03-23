@@ -40,8 +40,8 @@
   position: absolute;
   transform: translateY(100%);
   transition-duration: var(--transition-duration);
-  transition-property: transform, opacity;
-  transition-timing-function: ease-in;
+  transition-property: transform, opacity, color, background-color;
+  transition-timing-function: ease;
   width: 100%;
   z-index: 500;
 

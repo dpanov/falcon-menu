@@ -33,6 +33,9 @@
     padding: 0 calc(var(--space) * 2);
   }
 }
+.nav-button:hover {
+  color: var(--color-primary);
+}
 
 .nav-button__icon {
   transform: translateY(3px);
@@ -47,9 +50,9 @@
 .nav-button {
   // Transitioned properties
   opacity: 1;
-  transition-duration: var(--transition-duration);
-
+  
   // Transition settings
+  transition-duration: var(--transition-duration);
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
